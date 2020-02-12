@@ -1,25 +1,20 @@
 import React, {useCallback, useState} from 'react'
 import { StockItem } from '../../mocks'
+import {StocksMode} from '../../hooks/use-mode';
 
 interface StockProps {
-    item: StockItem
+    item: StockItem,
+    mode: StocksMode,
+    toggleMode: () => void
 }
 
-type StocksMode = 'absolute' | 'percent'
-
-export const Stock: React.FC<StockProps> = ({item}) => {
-    const [mode, setMode] = useState<StocksMode>('absolute')
-
-    const handleChangeMode = useCallback((event) => {
-        mode === 'absolute' ? setMode('percent') : setMode('absolute')
-    }, [mode, setMode])
-
+export const Stock: React.FC<StockProps> = ({item, mode, toggleMode}) => {
     return (
         <div key={item.symbol}>
             <span>{item.symbol}</span>
             <span style={{margin: '16px'}}>{item.price}</span>
             <button
-                onClick={handleChangeMode}
+                onClick={() => toggleMode()}
             >
                 {
                     mode === 'absolute' ?
