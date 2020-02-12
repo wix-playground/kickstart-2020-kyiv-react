@@ -1,14 +1,14 @@
 import React from 'react'
 import { StockItem } from '../mocks'
 import {Stock} from './stock';
-import {useMode} from '../hooks/use-mode';
+// import {useMode} from '../hooks/use-mode';
 
 interface StocksProps {
     items: StockItem[]
 }
 
 export const Stocks:React.FC<StocksProps> = (props) => {
-    const {mode, toggleMode} = useMode('percent')
+    // const {mode, toggleMode} = useMode('percent')
 
     return (
         <div>{
@@ -16,8 +16,6 @@ export const Stocks:React.FC<StocksProps> = (props) => {
                 item => <Stock
                     key={item.symbol}
                     item={item}
-                    mode={mode}
-                    toggleMode={toggleMode}
                 />
             )
         }</div>
