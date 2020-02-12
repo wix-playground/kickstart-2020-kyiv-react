@@ -1,6 +1,6 @@
 import React from 'react'
 import { StockItem } from '../mocks'
-import {Stock} from './stock';
+import Stock from './stock';
 // import {useMode} from '../hooks/use-mode';
 
 interface StocksProps {

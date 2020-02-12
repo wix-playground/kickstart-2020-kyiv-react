@@ -1,15 +1,12 @@
-import React, {useCallback, useState} from 'react'
+import React from 'react'
 import { StockItem } from '../../mocks'
-import {StocksMode} from '../../hooks/use-mode'
-import {mode} from '../../hocs/mode';
+import {mode, ModeProps} from '../../hocs/mode';
 
-interface StockProps {
+interface StockOwnProps {
     item: StockItem,
-    mode: StocksMode,
-    toggleMode: () => void
 }
 
-export const Stock: React.FC<StockProps> = ({item, mode, toggleMode}) => {
+export const Stock: React.FC<StockOwnProps & ModeProps> = ({item, mode, toggleMode}) => {
     return (
         <div key={item.symbol}>
             <span>{item.symbol}</span>
@@ -27,4 +24,4 @@ export const Stock: React.FC<StockProps> = ({item, mode, toggleMode}) => {
     )
 }
 
-export default mode(Stock)
+export default mode<StockOwnProps>(Stock)

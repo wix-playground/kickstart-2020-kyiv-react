@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e8e106-bbdf-4769-b5df-4932d57aefba" name="Default Changelist" comment="" />
+    <list default="true" id="56e8e106-bbdf-4769-b5df-4932d57aefba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/mode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/mode.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stocks/stock/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stocks/stock/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stocks/stock/stock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stocks/stock/stock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stocks/stocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stocks/stocks.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +43,7 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1XfwN9nhb9alTMxcdQlX1aG1Ad4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -86,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581450413882</updated>
       <workItem from="1581450415301" duration="12894000" />
+      <workItem from="1581513448431" duration="4532000" />
     </task>
     <servers />
   </component>
@@ -101,9 +110,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="461" y="190" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1581509759944" />
-    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1581505632186">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="625" y="285" width="670" height="753" key="search.everywhere.popup" timestamp="1581523195598">
+      <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1581505632186" />
+    <state x="625" y="285" width="670" height="753" key="search.everywhere.popup/0.23.1920.1177@0.23.1920.1177" timestamp="1581523195598" />
   </component>
 </project>
