@@ -9,24 +9,34 @@ interface StocksProps {
 
 interface StocksState {
     foo: number
+    foo2: number
 }
 
 export class Stocks extends PureComponent<StocksProps, StocksState> {
     state = {
-        foo: 0
+        foo: 0,
+        foo2: 0
     }
+
+    myDiv: HTMLDivElement | null = null
     //
     constructor(props: StocksProps) {
         super(props);
         this.state = {
-            foo: 0
+            foo: 4,
+            foo2: 4
         }
 
         this.handleButtonClick = this.handleButtonClick.bind(this)
     }
 
     componentDidMount(): void {
-        console.log('Stocks mounted');
+        console.log('Stocks mounted', this.state);
+        if (!this.myDiv) {
+            return
+        }
+
+        console.log(this.myDiv.offsetWidth)
     }
     componentDidUpdate(): void {
         console.log('Stocks updated');
@@ -42,15 +52,25 @@ export class Stocks extends PureComponent<StocksProps, StocksState> {
     handleButtonClick() {
         console.log(this);
         this.setState({
-            foo: 2
+            foo2: 2
         })
     }
+
+    setMyDiv = (ref: any) => {
+        this.myDiv = ref
+        console.log(ref);
+    }
+
+    setMyElement(ref: any) {
+        console.log(ref);
+    }
+
 
     render() {
         console.log('Stocks render');
         return (<>
                 <button onClick={this.handleButtonClick}>Ok</button>
-                <div>{
+                <div ref={this.setMyDiv}>{
                     this.props.items.map(
                         item => <Stock
                             key={item.symbol}
