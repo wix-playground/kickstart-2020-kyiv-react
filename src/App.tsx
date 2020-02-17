@@ -9,10 +9,12 @@ interface AppProps {
 
 const App: React.FC<AppProps> = (props) => {
   const [stocks] = useState(props.initialState)
+  const [isVisible, setVisibility] = useState(true)
 
   return (
     <div className="App">
-        <Stocks items={stocks}/>
+      <button onClick={() => setVisibility(!isVisible)}>Show/Hide</button>
+        {isVisible ? <Stocks items={stocks}/> : null}
     </div>
   );
 }
