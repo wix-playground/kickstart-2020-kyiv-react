@@ -2,9 +2,15 @@ import React, {PureComponent} from 'react'
 import { StockItem } from '../mocks'
 import Stock from './stock';
 // import {useMode} from '../hooks/use-mode';
+import {FilterContext, FilterState} from '../contexts/filters';
+import {filter as filterHOC} from '../hocs/filter'
+
+const {Consumer} = FilterContext
+
 
 interface StocksProps {
-    items: StockItem[]
+    items: StockItem[],
+    filters?: FilterState
 }
 
 interface StocksState {
@@ -12,7 +18,8 @@ interface StocksState {
     foo2: number
 }
 
-export class Stocks extends PureComponent<StocksProps, StocksState> {
+export class StocksComponent extends PureComponent<StocksProps, StocksState> {
+    static contextType = FilterContext
     state = {
         foo: 0,
         foo2: 0
@@ -65,12 +72,14 @@ export class Stocks extends PureComponent<StocksProps, StocksState> {
         console.log(ref);
     }
 
-
     render() {
-        console.log('Stocks render');
-        return (<>
-                <button onClick={this.handleButtonClick}>Ok</button>
-                <div ref={this.setMyDiv}>{
+        console.log('Stocks render', this.context, this.props.filters);
+
+        return (<Consumer>
+            {(filterValue) => <>
+                {console.log(filterValue)}
+              <button onClick={this.handleButtonClick}>Ok</button>
+              <div ref={this.setMyDiv}>{
                     this.props.items.map(
                         item => <Stock
                             key={item.symbol}
@@ -78,9 +87,11 @@ export class Stocks extends PureComponent<StocksProps, StocksState> {
                         />
                     )
                 }</div>
-          </>
+              </>
+            }
+          </Consumer>
         );
     }
 }
 
-export default Stocks
+export const Stocks = filterHOC(StocksComponent) as any

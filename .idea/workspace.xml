@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="56e8e106-bbdf-4769-b5df-4932d57aefba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stocks/stocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/stocks/stocks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -91,7 +94,7 @@
       <updated>1581450413882</updated>
       <workItem from="1581450415301" duration="12894000" />
       <workItem from="1581513448431" duration="5945000" />
-      <workItem from="1581930241131" duration="3236000" />
+      <workItem from="1581930241131" duration="8807000" />
     </task>
     <servers />
   </component>
